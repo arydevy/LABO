@@ -1,0 +1,67 @@
+# V2.2
+# this is updated version of chatbot created before 
+#thanks for Advery for started code
+'''changelog :
+-*-lisa now can do simple calculation( ask her to "calc 5*4" or what ever you want her to compute)
+-*- now lisa had her own brithday it's 10-1-2020
+so you can ask her "how old are you" ;)
+-*- lisa can know the date of the current day
+ask her : "what is the date"
+-*- even she now able to display current time
+
+
+#upvote and leave  a comment to awesome updates coming soon'''
+
+import random
+import datetime
+
+date = datetime.datetime.now()
+year ,mon ,day= date.year ,date.month ,date.day
+theBrith = "10-1-2020"
+theBrith_List = theBrith.split("-")
+user = "Creators"
+inputFromUser = input('What you up to today...?\n')
+myname = ("My name is Lisa bot")
+about = "lisa is an assistant created by arydev and developed by yossef Dawoad"
+mybrith = "10-1-20"
+home = "python city ;)"
+greeting= "hi there"
+today = f"it's {date:%m %h} and it's {date:%a}, yeah馃檵"
+timeNow = f"it's {date:%I:%M %p}"
+
+#greating some function to make the world easy ;)
+def calclate(text):
+    textintoList = text.split(" ")
+    calcList = textintoList[1:]
+    str_result = " ".join(map(str, calcList))
+    return print(f'the answer is {eval(str_result)}')  # for what you said after calc
+
+
+def speach(input, output):
+    if input == inputFromUser:
+        print(output)
+    else:
+        print("i don't recognize what you enter")
+        
+def brithCalc(day,mon):
+    days= day-int(theBrith_List[0])
+    months = mon-int(theBrith_List[1])
+    return f"i have {days} days and {months} months now 馃ズ"
+
+input_output = {"hi": greeting,
+                'hello': greeting,
+                "what is your name": myname,
+                "my name": user,
+                "about": about,
+                "where are you from": home,
+                "how old are you":brithCalc(day,mon),
+                "what is the date": today,
+                "what is the time": timeNow}
+
+try:
+    speach(inputFromUser, input_output[inputFromUser])
+except:
+    if 'calc' in inputFromUser:
+        calclate(inputFromUser)
+    else:
+        print("i don't have this Featrue yet wait for the next update ,you can tell us what we can do to improve our lisa ;)")
