@@ -15,7 +15,7 @@ input_output = {"hi": greeting,
                 "where are you from": home,
                 "how old are you":brithCalc(day,mon),
                 "what is the date": today,
-                "what is the time": timeNow
+                "what is the time": timeNow,
                 "bye" : exit()
                 }
 
