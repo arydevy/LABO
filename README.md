@@ -3,6 +3,19 @@ Labo is a simple chat bot made by arydev and onther githob contributers is dosen
 if you want to learn some python this is a gud simple project 
 
 
+how to use
+
+
+                'hello'-greatings
+                "what is your name" -display labo's name
+                "my name" -devs name
+                "about" -abouth bot
+                "where are you from" -where lisa is from
+                "how old are you" -how old is lisa
+                "what is the date" -tells the curent date
+                "what is the time" tels the curent time
+                "bye" exit
+
 Story
 
 Labo is a Sololearn progect originaly made by Arydev for learning porposes
